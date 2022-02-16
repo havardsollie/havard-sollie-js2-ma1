@@ -8,26 +8,28 @@ let productLoop = data;
 function renderProducts () {
     productContainer.innerHTML = "";
 
-    productLoop.forEach(function (display) {
+    productLoop.forEach(function (data) {
         productContainer.innerHTML +=  `<div class="display">
-                    <h2>${display.title}</h2>
-                    <h3>${display.price}</h3>
+                    <h2>${data.title}</h2>
+                    <h3>${data.price}</h3>
                 <div>`
-    
     });
 };
 
 renderProducts();
 
-filter.onkeyup = function (event) {
+let prices = data.price;
 
-    const filterValue = event.target.value.trim().toLowerCase();
+filter.onkeyup = function () {
 
-    const filteredProducts = data.filter(function (display) {
-        if (display.title.toLowerCase().startsWith(filterValue)) {
+    const filteredProducts = prices.filter(filterNumbers);
+    console.log(filterNumbers)
+
+    function filterNumbers(prices) {
+        if(prices > 50) {
             return true;
         }
-    });
+    };
 
     productLoop = filteredProducts;
 
