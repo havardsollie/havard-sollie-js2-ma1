@@ -11,7 +11,8 @@ function renderProducts () {
     productLoop.forEach(function (data) {
         productContainer.innerHTML +=  `<div class="display">
                     <h2>${data.title}</h2>
-                    <h3>${data.price}</h3>
+                    <h3>$${data.price}</h3>
+                    <i class="fa-thin fa-gift-card"></i>
                 <div>`
     });
 };
