@@ -55,9 +55,18 @@ h3 {
     font-size: 15px;
 }
 
-i {
-    font-size: 20px;
-    color: black;
+.btn {
+    height: 40px;
+    width: 80px;
+    background: rgb(168, 96, 96);
+    border: transparent;
+    color: white;
+    margin-right: -40px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 .loader {
