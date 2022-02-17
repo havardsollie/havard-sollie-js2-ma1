@@ -8,3 +8,4 @@ const productContainer = document.querySelector(".products");
 
 
 export default data;
+

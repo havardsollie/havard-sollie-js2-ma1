@@ -3,7 +3,7 @@ import data from "./data/products.js";
 console.log(data);
 
 const productContainer = document.querySelector(".products");
-const search = document.querySelector(".search");
+const button = document.querySelector(".btn");
 
 let productLoop = data;
 
@@ -14,29 +14,16 @@ function renderProducts () {
         productContainer.innerHTML +=  `<div class="display">
                     <h2>${data.title}</h2>
                     <h3>$${data.price}</h3>
-                    <button class="btn">Add to wishlist</button>
-                <div>`
-                
-
-        let prices = data.price;
-
-        search.onkeyup = function (event) {
-        
-        const filterValue = event.target.value.trim();
-
-        const filteredProducts = prices.filter(filterNumbers);
-
-        function filterNumbers(prices) {
-            if(prices > 50, data.title.toLowerCase().startsWith(filterValue)) {
-                return true;
-            }
-        };
-
-        productLoop = filteredProducts;
-
-        renderProducts();
-    };
-        });
+                <div>`    
+    });
 };
 
 renderProducts();
+
+button.onclick = function () {
+
+    prices.sort(function(a,b,) {
+        return a - b;
+    })
+    renderProducts();
+};
