@@ -14,16 +14,18 @@ function renderProducts () {
         productContainer.innerHTML +=  `<div class="display">
                     <h2>${data.title}</h2>
                     <h3>$${data.price}</h3>
-                <div>`    
+                <div>`  
     });
+
+    let prices = data.price;
+
+    button.onclick = function () {
+
+        prices.sort(function (a,b,) {
+            return (a - b);
+        })
+    }; 
 };
 
 renderProducts();
 
-button.onclick = function () {
-
-    prices.sort(function(a,b,) {
-        return a - b;
-    })
-    renderProducts();
-};
