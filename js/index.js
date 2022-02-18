@@ -30,7 +30,7 @@ renderProducts();
 
 search.onkeyup = function () {
 
-    const maxPrices = productLoop.filter(function(data) {
+    const maxPrices = productLoop.sort(function(data) {
         if(productLoop.price < 50) {
             return true;
         }
