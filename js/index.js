@@ -3,7 +3,7 @@ import data from "./data/products.js";
 
 
 const productContainer = document.querySelector(".products");
-const button = document.querySelector(".btn");
+const search = document.querySelector(".search");
 
 let productLoop = data;
 
@@ -22,20 +22,23 @@ function renderProducts () {
 
 renderProducts();
 
-var maxPrices = productLoop.filter(function(data) {
-    return data.price < 50;
-})
-
-console.log(maxPrices);
-
-
-// maxPrices.forEach(function(data) {
-//     button.onclick = function() {
-//         maxPrices.sort(function(a,b) {
-//             return a - b;
-//         })
-//     }
+// var maxPrices = productLoop.filter(function(data) {
+//     return data.price > 20;
 // })
+
+// console.log(maxPrices);
+
+search.onkeyup = function () {
+
+    const maxPrices = productLoop.filter(function(data) {
+        if(productLoop.price < 50) {
+            return true;
+        }
+    });
+
+    console.log(maxPrices);
+}
+
 
 // console.log(maxPrices);
 
